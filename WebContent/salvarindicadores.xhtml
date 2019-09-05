@@ -7,24 +7,23 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core">
 <h:head>
-	<title><ui:insert name="titulo">Indicadores</ui:insert></title>
+	<title><ui:insert name="titulo">Cadastro</ui:insert></title>
 	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
 	<link rel="stylesheet" type="text/css" href="css/estilo.css" />
+
 </h:head>
 <h:body>
 	<h:form>
 		<p:panel>
 			<div align="center">
-				<h1 style="color: black;">Cadastro de Indicadores - SGQ</h1>
-				<hr size="1"></hr>
+				<h1 style="color: red;">Cadastro </h1>
 
-				<fieldset>
-
-					<p:outputLabel for="info"
-						value="ColetaSTFC_InformacoesGerenciais_Autorizacao" />
+				<p:panelGrid columns="2">
+					<p:outputLabel for="info" value="ColetaSTFC_InformacoesGerenciais_Autorizacao" />
 					<p:inputText id="info" value="#{indicadoresMB.i.info}" />
 
-				</fieldset>
+
+				</p:panelGrid>
 
 			</div>
 		</p:panel>
