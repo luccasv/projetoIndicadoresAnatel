@@ -49,7 +49,7 @@ public class Indicadores {
 	private String astMetalico060;
 	private String astOutros061;
 	private String astFibraOpticaFtth062;
-
+	
 	/* ASC - Acesso em Serviço por Classe de Assinante */
 	private String ascResidencialPadrao063;
 	private String ascResidencialAice064;
