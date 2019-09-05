@@ -5,7 +5,7 @@
 	version="3.1">
 	<display-name>projetoSGQ</display-name>
 	<welcome-file-list>
-		<welcome-file>indicadores.jsf</welcome-file>
+		<welcome-file>salvarindicadores.xhtml</welcome-file>
 	</welcome-file-list>
 
 	<servlet>
@@ -22,7 +22,11 @@
 		<param-value>sunny</param-value>
 	</context-param>
 	
+	<context-param> 
+	<param-name>javax.faces.FACELETS_SKIP_COMMENTS</param-name> 
+	<param-value>true</param-value> </context-param>
 	<context-param>
+	
 		<description>Métodos de salvar 'View State': 'client' ou 'server' (server=padrão)</description>
 		<param-name>javax.faces.STATE_SAVING_METHOD</param-name>
 		<param-value>client</param-value>
