@@ -1,8 +1,12 @@
 package model.dominio;
 
 import java.sql.Date;
+
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
@@ -12,6 +16,8 @@ public class Indicadores {
 
 	/* CHAVE PRIMÁRIA */
 	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ID_INDICADORES")
+	@SequenceGenerator(name = "ID_INDICADORES", sequenceName = "SEQ_INDICADORES", allocationSize = 1)
 	private int id;
 
 	/* DADOS GERENCIAIS */
