@@ -18,17 +18,20 @@
 			<div align="center">
 				<h1 style="color: black;">Cadastro de Indicadores - SGQ</h1>
 
-				<p:panelGrid columns="2">
+				<p:panelGrid columns="4">
 					<p:outputLabel for="info"
 						value="ColetaSTFC_InformacoesGerenciais_Autorizacao" />
 					<p:inputText id="info" value="#{indicadoresMB.i.info}" />
 
+					
+					
 					<p:outputLabel for="Ano" value="Ano de Referência da Coleta" />
 					<p:inputText id="Ano" value="#{indicadoresMB.i.ano}" />
 
 					<p:outputLabel for="Mes" value="Mês de Referência da Coleta" />
 					<p:inputText id="Mes" value="#{indicadoresMB.i.mes}" />
-
+					
+					
 					<p:outputLabel for="tipoArquivo"
 						value="Tipo do Arquivo: Mensal = 0 ou Retificação = 1" />
 					<p:spinner id="tipoArquivo" value="#{indicadoresMB.i.tipoArquivo}" />
