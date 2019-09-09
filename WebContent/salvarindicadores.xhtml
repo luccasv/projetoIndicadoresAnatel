@@ -20,7 +20,9 @@
 				<br/>
 
 				<h2>Dados Gerenciais</h2>
-				<p:panelGrid columns="4">
+				
+				
+				<p:panelGrid columns="6">
 					<p:outputLabel for="info"
 						value="ColetaSTFC_InformacoesGerenciais_Autorizacao" />
 					<p:inputText id="info" value="#{indicadoresMB.i.info}" />
@@ -30,10 +32,15 @@
 
 					<p:outputLabel for="Mes" value="Mês de Referência da Coleta" />
 					<p:inputText id="Mes" value="#{indicadoresMB.i.mes}" />
-
-					<p:outputLabel for="tipoArquivo"
-						value="Tipo do Arquivo: Mensal = 0 ou Retificação = 1" />
-					<p:spinner id="tipoArquivo" value="#{indicadoresMB.i.tipoArquivo}" />
+					
+					<p:outputLabel for="tipoArquivo" value="Tipo do Arquivo" />
+					<p:selectOneMenu id="tipoArquivo" required="true"
+						value="#{indicadoresMB.i.tipoArquivo}" style="width:125px">
+						<f:selectItem itemLabel="Mensal - 0"
+							itemValue="0" />
+						<f:selectItem itemLabel="retificação - 1"
+							itemValue="1" />
+					</p:selectOneMenu>
 
 					<p:outputLabel for="identificador" value="Identificador Único" />
 					<p:inputText id="identificador"
@@ -44,11 +51,16 @@
 					<p:inputText id="outorgaCNPJ"
 						value="#{indicadoresMB.i.outorgaCNPJ}" />
 				</p:panelGrid>
+				<hr></hr>
 				<br/>
 				<br/>
 				<br/>
+				
 				<h2>Dados da Coleta</h2>
+				
+				
 				<p:panelGrid columns="6">
+
 					<p:outputLabel for="nivelColeta" value="Nível da Coleta" />
 					<p:selectOneMenu id="nivelColeta" required="true"
 						value="#{indicadoresMB.i.nivelColeta}" style="width:125px">
@@ -68,11 +80,15 @@
 					<p:inputText id="unidadeColeta"
 						value="#{indicadoresMB.i.unidadeColeta}" />
 				</p:panelGrid>
+				<hr></hr>
 				<br/>
 				<br/>
 				<br/>
+
+				<h2>AST - Acesso em Serviço por Tipo de Tecnologia</h2>
 				
-				<p:panelGrid columns="2">
+				
+				<p:panelGrid columns="4">
 					<p:outputLabel for="astSemFioTerrestre058"
 						value="Sem Fio Terrestre - 058" />
 					<p:inputText id="astSemFioTerrestre058"
@@ -94,7 +110,15 @@
 						value="Fibra Óptica FTTH - 062" />
 					<p:inputText id="astFibraOpticaFtth062"
 						value="#{indicadoresMB.i.astFibraOpticaFtth062}" />
+				</p:panelGrid>
+				<hr></hr>
+				<br/>
+				<br/>
+				<br/>
 
+				<h2>ASC - Acesso em Serviço por Classe de Assinante</h2>				
+								
+				<p:panelGrid columns="4">
 					<p:outputLabel for="ascResidencialPadrao063"
 						value="Residêncial Padrão - 063" />
 					<p:inputText id="ascResidencialPadrao063"
@@ -113,7 +137,16 @@
 					<p:outputLabel for="ascTronco066" value="Tronco - 066" />
 					<p:inputText id="ascTronco066"
 						value="#{indicadoresMB.i.ascTronco066}" />
+				</p:panelGrid>
+				<hr></hr>
+				<br/>
+				<br/>
+				<br/>
 
+				<h2>ASO - Acesso em Serviço por Tipo de Oferta</h2>				
+				
+
+				<p:panelGrid columns="4">
 					<p:outputLabel for="asoSTFC067" value="STFC - 067" />
 					<p:inputText id="asoSTFC067" value="#{indicadoresMB.i.asoSTFC067}" />
 
@@ -148,7 +181,16 @@
 						value="STFC + SCM + TV + SMP - 074" />
 					<p:inputText id="asoSTFC_SCM_TV_SMP074"
 						value="#{indicadoresMB.i.asoSTFC_SCM_TV_SMP074}" />
+				</p:panelGrid>
+				<hr></hr>
+				<br/>
+				<br/>
+				<br/>
 
+				<h2>ASP - Acesso em Serviço por Tipo de Serviço</h2>				
+				
+
+				<p:panelGrid columns="6">
 					<p:outputLabel for="aspPlanoBasico075" value="Plano Básico - 075" />
 					<p:inputText id="aspPlanoBasico075"
 						value="#{indicadoresMB.i.aspPlanoBasico075}" />
@@ -161,7 +203,16 @@
 						value="Plano Alternativo - 077" />
 					<p:inputText id="aspPlanoAlternativo077"
 						value="#{indicadoresMB.i.aspPlanoAlternativo077}" />
+				</p:panelGrid>
+				<hr></hr>
+				<br/>
+				<br/>
+				<br/>
 
+				<h2>ASF - Acesso em Serviço por Forma de Pagamento</h2>				
+				
+
+				<p:panelGrid columns="6">
 					<p:outputLabel for="asfPosPago078" value="Pós-Pago - 078" />
 					<p:inputText id="asfPosPago078"
 						value="#{indicadoresMB.i.asfPosPago078}" />
@@ -173,7 +224,17 @@
 					<p:outputLabel for="asfMisto080" value="Misto - 080" />
 					<p:inputText id="asfMisto080"
 						value="#{indicadoresMB.i.asfMisto080}" />
+				</p:panelGrid>
+				<hr></hr>
+				<br/>
+				<br/>
+				<br/>
 
+
+				<h2>MLOCAIS</h2>				
+				
+
+				<p:panelGrid columns="6">
 					<p:outputLabel for="mLocaisMinutosLocaisFixoOnNet084"
 						value="Minutos Locais Fixo On-Net - 084" />
 					<p:inputText id="mLocaisMinutosLocaisFixoOnNet084"
@@ -188,7 +249,16 @@
 						value="Minutos Locais Fixo-Móvel - 086" />
 					<p:inputText id="mLocaisMinutosLocaisFixoMovel086"
 						value="#{indicadoresMB.i.mLocaisMinutosLocaisFixoMovel086}" />
+				</p:panelGrid>
+				<hr></hr>
+				<br/>
+				<br/>
+				<br/>
 
+				<h2>MLDN</h2>				
+				
+
+				<p:panelGrid columns="4">
 					<p:outputLabel for="mldnMinutosLdnFixoFixo087"
 						value="Minutos LDN Fixo-Fixo - 087" />
 					<p:inputText id="mldnMinutosLdnFixoFixo087"
@@ -208,7 +278,16 @@
 						value="Minutos LDN Móvel-Móvel - 090" />
 					<p:inputText id="mldnMinutosLdnMovelMovel090"
 						value="#{indicadoresMB.i.mldnMinutosLdnMovelMovel090}" />
+				</p:panelGrid>
+				<hr></hr>
+				<br/>
+				<br/>
+				<br/>
 
+				<h2>MLDI</h2>				
+				
+
+				<p:panelGrid columns="4">
 					<p:outputLabel for="mldiMinutosLdiOrigemFixo091"
 						value="Minutos LDI Origem Fixo - 091" />
 					<p:inputText id="mldiMinutosLdiOrigemFixo091"
@@ -218,56 +297,104 @@
 						value="Minutos LDI Origem Móvel - 092" />
 					<p:inputText id="mldiMinutosLdiOrigemMovel092"
 						value="#{indicadoresMB.i.mldiMinutosLdiOrigemMovel092}" />
+				</p:panelGrid>
+				<hr></hr>
+				<br/>
+				<br/>
+				<br/>
 
-					<p:outputLabel for="fttPropria093" value="FTT Própria - 093" />
+				<h2>Força de Trabalho - FTT</h2>				
+				
+
+				<p:panelGrid columns="4">
+					<p:outputLabel for="fttPropria093" value="Própria - 093" />
 					<p:inputText id="fttPropria093"
 						value="#{indicadoresMB.i.fttPropria093}" />
 
-					<p:outputLabel for="fttTerceiros094" value="FTT de Terceiros - 094" />
+					<p:outputLabel for="fttTerceiros094" value="De Terceiros - 094" />
 					<p:inputText id="fttTerceiros094"
 						value="#{indicadoresMB.i.fttTerceiros094}" />
 
-					<p:outputLabel for="fttDealers095" value="FTT de Dealers - 095" />
+					<p:outputLabel for="fttDealers095" value="De Dealers - 095" />
 					<p:inputText id="fttDealers095"
 						value="#{indicadoresMB.i.fttDealers095}" />
+				</p:panelGrid>
+				<hr></hr>
+				<br/>
+				<br/>
+				<br/>
 
+				<h2>Força de Trabalho - FTCRM</h2>				
+				
+
+				<p:panelGrid columns="4">
 					<p:outputLabel for="ftcrmPropria096"
-						value="FTCRM Própria Empregada em CRM - 096" />
+						value="Própria Empregada em CRM - 096" />
 					<p:inputText id="ftcrmPropria096"
 						value="#{indicadoresMB.i.ftcrmPropria096}" />
 
 					<p:outputLabel for="ftcrmTerceiros097"
-						value="FTCRM de Terceiros Empregada em CRM - 097" />
+						value="De Terceiros Empregada em CRM - 097" />
 					<p:inputText id="ftcrmTerceiros097"
 						value="#{indicadoresMB.i.ftcrmTerceiros097}" />
+				</p:panelGrid>
+				<hr></hr>
+				<br/>
+				<br/>
+				<br/>
 
+				<h2>Força de Trabalho - FTT</h2>				
+
+
+				<p:panelGrid columns="4">
 					<p:outputLabel for="ftredePropria098"
-						value="FTRede Própria Empregada na Rede - 098" />
+						value="Própria Empregada na Rede - 098" />
 					<p:inputText id="ftredePropria098"
 						value="#{indicadoresMB.i.ftredePropria098}" />
 
 					<p:outputLabel for="ftredeTerceiros099"
-						value="FTRede de Terceiros Empregada na Rede - 099" />
+						value="De Terceiros Empregada na Rede - 099" />
 					<p:inputText id="ftredeTerceiros099"
 						value="#{indicadoresMB.i.ftredeTerceiros099}" />
+				</p:panelGrid>
+				<hr></hr>
+				<br/>
+				<br/>
+				<br/>
+				
 
-					<p:outputLabel for="dcemLDN081" value="DCEM LDN - 081" />
+				<h2>Documentos de Cobrança - DCEM</h2>				
+
+				<p:panelGrid columns="4">
+					<p:outputLabel for="dcemLDN081" value="LDN - 081" />
 					<p:inputText id="dcemLDN081" value="#{indicadoresMB.i.dcemLDN081}" />
 
-					<p:outputLabel for="dcemLDI082" value="DCEM LDI - 082" />
+					<p:outputLabel for="dcemLDI082" value="LDI - 082" />
 					<p:inputText id="dcemLDI082" value="#{indicadoresMB.i.dcemLDI082}" />
+				</p:panelGrid>
+				<hr></hr>
+				<br/>
+				<br/>
+				<br/>
+				
 
-					<p:outputLabel for="cadDesignados083" value="CAD Designados - 083" />
+
+				<h2>Uso de Recursos de Numeração - CAD</h2>				
+
+
+				<p:panelGrid columns="2">
+					<p:outputLabel for="cadDesignados083" value="Designados - 083" />
 					<p:inputText id="cadDesignados083"
 						value="#{indicadoresMB.i.cadDesignados083}" />
 
 
 				</p:panelGrid>
-
-				<br /> <br />
+				<hr></hr>
+				
+				<br /> <br /> <br />
 				<p:commandButton ajax="false" value="Salvar Indicadores"
 					action="#{indicadoresMB.SalvarIndicadores}" />
-				<br /> <br /> <br /> <br />
+				<br /> <br /> <br /> <br /> <br />
 
 			</div>
 		</p:panel>
